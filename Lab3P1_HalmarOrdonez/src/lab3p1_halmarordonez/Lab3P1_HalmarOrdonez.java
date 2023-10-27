@@ -57,7 +57,7 @@ public class Lab3P1_HalmarOrdonez {
                     System.out.println();
                     System.out.println("Pocket monsters: ");
                     System.out.println("Que modo de pelea deasea: ");
-                    System.out.println("1. Hasta la muerte por rondas");
+                    System.out.println("1. Hasta la muerte");
                     System.out.println("2. Por rondas");
                     System.out.print("Ingrese su opcion: ");
                     int mode = read.nextInt();
@@ -104,7 +104,20 @@ public class Lab3P1_HalmarOrdonez {
                                         System.out.println("Vide de pokemon 1: "+hp1);
                                         System.out.println("Vida de pokemon 2: "+hp2);
                                         rd++;
-                                    }    
+                                    }
+                                    if(hp1==0 && hp2>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 2 ha sido el ganador!!!");
+                                    }
+                                    else if(hp2==0 && hp1>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                    }
+                                    else{
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Los dos pokemones se han desmayado");
+                                        System.out.println("No hay ganador!!!");
+                                    }
                                 }
                                 case 2->{
                                     System.out.println("Pelea por rondas");
@@ -130,13 +143,33 @@ public class Lab3P1_HalmarOrdonez {
                                                 System.out.println("Vida de pokemon 2: "+hp2);
                                                 rd++;
                                                 System.out.println();
-                                            }else if(hp1<=0){
+                                            }
+                                            else if(hp1<=0 && hp2>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 1 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 2 ha sido el ganador!!!");
                                                 ct=rds;
-                                            }else{
+                                            }else if(hp2==0 && hp1>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 2 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 1 ha sido el ganador!!!");
                                                 ct=rds;
                                             }
+                                            else{
+                                                System.out.println("********** Fin de la Batalla **********");
+                                                System.out.println("Los 2 pokemones se han desmayado");
+                                                System.out.println("No hay ganador!!!");
+                                            }
+                                        }
+                                        if(hp2>0 && hp1>hp2){
+                                            System.out.println("********** Fin de la Batalla **********");
+                                            System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                        }
+                                        else if(hp1>0 && hp2>hp1){
+                                            System.out.println("********** Fin de la Batalla **********");                                            
+                                            System.out.println("Pokemon 2 ha sido el ganador!!!");
                                         }
                                         
                                     }else{
@@ -147,7 +180,7 @@ public class Lab3P1_HalmarOrdonez {
                         }    
                         case 2->{
                             double hp1=gyahp, hp2=girhp, atk1=gyaatk, atk2=giratk, def1=gyadef, def2=girdef;
-                                switch(mode){
+                            switch(mode){
                                 case 1->{
                                     System.out.println("Pelea hasta la muerta");
                                     while(hp1>0 && hp2>0){
@@ -167,7 +200,20 @@ public class Lab3P1_HalmarOrdonez {
                                         System.out.println("Vide de pokemon 1: "+hp1);
                                         System.out.println("Vida de pokemon 2: "+hp2);
                                         rd++;
-                                    }    
+                                    }
+                                    if(hp1==0 && hp2>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 2 ha sido el ganador!!!");
+                                    }
+                                    else if(hp2==0 && hp1>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                    }
+                                    else{
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Los dos pokemones se han desmayado");
+                                        System.out.println("No hay ganador!!!");
+                                    }
                                 }
                                 case 2->{
                                     System.out.println("Pelea por rondas");
@@ -193,13 +239,33 @@ public class Lab3P1_HalmarOrdonez {
                                                 System.out.println("Vida de pokemon 2: "+hp2);
                                                 rd++;
                                                 System.out.println();
-                                            }else if(hp1<=0){
+                                            }
+                                            else if(hp1<=0 && hp2>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 1 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 2 ha sido el ganador!!!");
                                                 ct=rds;
-                                            }else{
+                                            }else if(hp2==0 && hp1>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 2 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 1 ha sido el ganador!!!");
                                                 ct=rds;
                                             }
+                                            else{
+                                                System.out.println("********** Fin de la Batalla **********");
+                                                System.out.println("Los 2 pokemones se han desmayado");
+                                                System.out.println("No hay ganador!!!");
+                                            }
+                                        }
+                                        if(hp2>0 && hp1>hp2){
+                                            System.out.println("********** Fin de la Batalla **********");
+                                            System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                        }
+                                        else if(hp1>0 && hp2>hp1){
+                                            System.out.println("********** Fin de la Batalla **********");                                            
+                                            System.out.println("Pokemon 2 ha sido el ganador!!!");
                                         }
                                         
                                     }else{
@@ -210,7 +276,7 @@ public class Lab3P1_HalmarOrdonez {
                         }
                         case 3->{
                             double hp1=drahp, hp2=girhp, atk1=draatk, atk2=giratk, def1=dradef, def2=girdef;
-                                switch(mode){
+                            switch(mode){
                                 case 1->{
                                     System.out.println("Pelea hasta la muerta");
                                     while(hp1>0 && hp2>0){
@@ -230,7 +296,20 @@ public class Lab3P1_HalmarOrdonez {
                                         System.out.println("Vide de pokemon 1: "+hp1);
                                         System.out.println("Vida de pokemon 2: "+hp2);
                                         rd++;
-                                    }    
+                                    }
+                                    if(hp1==0 && hp2>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 2 ha sido el ganador!!!");
+                                    }
+                                    else if(hp2==0 && hp1>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                    }
+                                    else{
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Los dos pokemones se han desmayado");
+                                        System.out.println("No hay ganador!!!");
+                                    }
                                 }
                                 case 2->{
                                     System.out.println("Pelea por rondas");
@@ -256,13 +335,33 @@ public class Lab3P1_HalmarOrdonez {
                                                 System.out.println("Vida de pokemon 2: "+hp2);
                                                 rd++;
                                                 System.out.println();
-                                            }else if(hp1<=0){
+                                            }
+                                            else if(hp1<=0 && hp2>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 1 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 2 ha sido el ganador!!!");
                                                 ct=rds;
-                                            }else{
+                                            }else if(hp2==0 & hp1>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 2 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 1 ha sido el ganador!!!");
                                                 ct=rds;
                                             }
+                                            else{
+                                                System.out.println("********** Fin de la Batalla **********");
+                                                System.out.println("Los 2 pokemones se han desmayado");
+                                                System.out.println("No hay ganador!!!");
+                                            }
+                                        }
+                                        if(hp2>0 && hp1>hp2){
+                                            System.out.println("********** Fin de la Batalla **********");
+                                            System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                        }
+                                        else if(hp1>0 && hp2>hp1){
+                                            System.out.println("********** Fin de la Batalla **********");                                            
+                                            System.out.println("Pokemon 2 ha sido el ganador!!!");
                                         }
                                         
                                     }else{
@@ -273,7 +372,7 @@ public class Lab3P1_HalmarOrdonez {
                         }
                         case 4->{
                             double hp1=girhp, hp2=sylhp, atk1=giratk, atk2=sylatk, def1=girdef, def2=syldef;
-                                switch(mode){
+                            switch(mode){
                                 case 1->{
                                     System.out.println("Pelea hasta la muerta");
                                     while(hp1>0 && hp2>0){
@@ -293,7 +392,20 @@ public class Lab3P1_HalmarOrdonez {
                                         System.out.println("Vide de pokemon 1: "+hp1);
                                         System.out.println("Vida de pokemon 2: "+hp2);
                                         rd++;
-                                    }    
+                                    }
+                                    if(hp1==0 && hp2>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 2 ha sido el ganador!!!");
+                                    }
+                                    else if(hp2==0 && hp1>0){
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                    }
+                                    else{
+                                        System.out.println("********** Fin de la Batalla **********");
+                                        System.out.println("Los dos pokemones se han desmayado");
+                                        System.out.println("No hay ganador!!!");
+                                    }
                                 }
                                 case 2->{
                                     System.out.println("Pelea por rondas");
@@ -319,13 +431,33 @@ public class Lab3P1_HalmarOrdonez {
                                                 System.out.println("Vida de pokemon 2: "+hp2);
                                                 rd++;
                                                 System.out.println();
-                                            }else if(hp1<=0){
+                                            }
+                                            else if(hp1<=0 && hp2>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 1 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 2 ha sido el ganador!!!");
                                                 ct=rds;
-                                            }else{
+                                            }else if(hp2==0 && hp1>0){
+                                                System.out.println("********** Fin de la Batalla **********");
                                                 System.out.println("Pokemon 2 no ha podido terminar las rondas");
+                                                System.out.println();
+                                                System.out.println("Pokemon 1 ha sido el ganador!!!");
                                                 ct=rds;
                                             }
+                                            else{
+                                                System.out.println("********** Fin de la Batalla **********");
+                                                System.out.println("Los 2 pokemones se han desmayado");
+                                                System.out.println("No hay ganador!!!");
+                                            }
+                                        }
+                                        if(hp2>0 && hp1>hp2){
+                                            System.out.println("********** Fin de la Batalla **********");
+                                            System.out.println("Pokemon 1 ha sido el ganador!!!");
+                                        }
+                                        else if(hp1>0 && hp2>hp1){
+                                            System.out.println("********** Fin de la Batalla **********");                                            
+                                            System.out.println("Pokemon 2 ha sido el ganador!!!");
                                         }
                                         
                                     }else{
